@@ -1,28 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-- Ruby version
-
-- System dependencies
-
-- Configuration
-
-- Database creation
-
-- Database initialization
-
-- How to run the test suite
-
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...
-
 # Medmory
 
 ## Contents
@@ -34,7 +9,7 @@ Things you may want to cover:
 
 ## General info
 
-- Application where users notify each other upon medication compliance and track the history
+- Application where users notify each other via SMS message upon medication compliance and track the history with a graph
 
 - Available in any device; mobile, tablet, and PC.
 
@@ -96,21 +71,28 @@ AARON_NUMBER=
 $ bundle install
 ```
 
-4. Install client dependencies:
+4. Create postgresql database for rails server:
 
 ```bash
 # in root dir
-$ cd client
+$ rails db:create
+$ rails db:reset
+```
+
+5. Install client dependencies:
+
+```bash
+$ cd client # move into client dir
 $ npm install
 ```
 
-5. Run server and client in a separate terminal
+6. Run server and client in a separate terminal
 
 ```bash
 # in root dir
 $ rails s # to run server
 
-# move into client dir
-$ cd client
+# in another terminal
+$ cd client # move into client dir
 $ npm start # to run client
 ```
